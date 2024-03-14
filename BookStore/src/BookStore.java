@@ -229,9 +229,9 @@ public class BookStore {
     private static String getGenreFileName(String genreCode) {
         switch (genreCode) {
             case "CCB":
-                return "Cartoons_Comics_Books.csv";
+                return "Cartoons_Comics.csv";
             case "HCB":
-                return "Hobbies_Collectibles_Books.csv";
+                return "Hobbies_Collectibles.csv";
             case "MTV":
                 return "Movies_TV_Books.csv";
             case "MRB":
