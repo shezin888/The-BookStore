@@ -45,11 +45,12 @@ class InvalidYearException extends Exception {
 
 public class BookStore {
     // Simplified version of do_part1() method
-
-    private static final String WRITE_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/output/"; // Example write path
+    private static final String READ_BASE_PATH = "C:\\Users\\HP\\Documents\\GitHub\\The-BookStore\\BookStore\\data\\"; // Example write path
+    private static final String WRITE_BASE_PATH = "C:\\Users\\HP\\Documents\\GitHub\\The-BookStore\\BookStore\\output\\"; // Example write path
     public static void do_part1() {
         // Assume the existence of a method to get the list of file names
-        String[] fileNames = getFileNames("/home/shezin/Desktop/java/PPS_2_BookStore/Comp6481_W24_Assg2-Needed-Files/part1_input_file_names.txt");
+        String path = READ_BASE_PATH + "part1_input_file_names.txt";
+        String[] fileNames = getFileNames(path);
         for (String fileName : fileNames) {
             //System.out.println(fileName+'\n');
             try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
@@ -78,14 +79,13 @@ public class BookStore {
         String[] tempFileNames = new String[100];
         int count = 0;
 
-        String pathPrefix = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/data/";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(configFileName))) {
             // Skipping the first line as it contains the number of files, not a file name
             reader.readLine();
             String line;
             while ((line = reader.readLine()) != null && count < tempFileNames.length) {
-                tempFileNames[count++] = pathPrefix + line.trim();
+                tempFileNames[count++] = READ_BASE_PATH + line.trim();
             }
         } catch (IOException e) {
             System.out.println("Error reading config file: " + configFileName);
