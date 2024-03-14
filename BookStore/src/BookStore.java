@@ -45,6 +45,7 @@ class InvalidYearException extends Exception {
 
 public class BookStore {
     // Simplified version of do_part1() method
+
     private static final String WRITE_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/output/"; // Example write path
     public static void do_part1() {
         // Assume the existence of a method to get the list of file names
@@ -105,14 +106,35 @@ public class BookStore {
         // Split the line into fields. Considering a record might have double quotes for title field with commas.
         String[] fields = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
-        if (fields.length != 6) {
-            throw new TooManyFieldsException("Incorrect number of fields in record.");
+        if (fields.length < 6) {
+            throw new TooFewFieldsException("Too many fields");
+        }
+        else if (fields.length >6) {
+            throw new TooManyFieldsException("Too few fields");
         }
 
         // Remove potential double quotes from title and genre
         fields[0] = fields[0].replace("\"", "");
         fields[4] = fields[4].replace("\"", "");
 
+        if (fields[0].trim().isEmpty()) { // title
+            throw new MissingFieldException("Missing field (title)");
+        }
+        if (fields[1].trim().isEmpty()) { // authors
+            throw new MissingFieldException("Missing field (authors)");
+        }
+        if (fields[2].trim().isEmpty()) { // price
+            throw new MissingFieldException("Missing field (price)");
+        }
+        if (fields[3].trim().isEmpty()) { // isbn
+            throw new MissingFieldException("Missing field (ISBN)");
+        }
+        if (fields[4].trim().isEmpty()) { // genre
+            throw new UnknownGenreException("Missing field (genre)");
+        }
+        if (fields[5].trim().isEmpty()) { // year
+            throw new MissingFieldException("Missing field (year)");
+        }
         // Validations
         validatePrice(fields[2]);
         validateYear(fields[5]);
@@ -125,7 +147,7 @@ public class BookStore {
     private static void validatePrice(String priceStr) throws InvalidPriceException {
         try {
             double price = Double.parseDouble(priceStr);
-            if (price < 0) throw new InvalidPriceException("Price cannot be negative: " + priceStr);
+            if (price < 0) throw new InvalidPriceException("Invalid Price: " + priceStr);
         } catch (NumberFormatException e) {
             throw new InvalidPriceException("Invalid price format: " + priceStr);
         }
@@ -134,17 +156,40 @@ public class BookStore {
     private static void validateYear(String yearStr) throws InvalidYearException {
         try {
             int year = Integer.parseInt(yearStr);
-            if (year < 1995 || year > 2024) throw new InvalidYearException("Year out of range: " + yearStr);
+            if (year < 1995 || year > 2024) throw new InvalidYearException("Invalid year: " + yearStr);
         } catch (NumberFormatException e) {
-            throw new InvalidYearException("Invalid year format: " + yearStr);
+            throw new InvalidYearException("Invalid year: " + yearStr);
         }
     }
 
     private static void validateISBN(String isbn) throws InvalidIsbnException {
         if (isbn.length() == 10) {
             // Implement 10-digit ISBN validation
+            int sum = 0;
+            for (int i = 0; i < 10; i++) {
+                // Assuming that the ISBN contains only digits
+                if (!Character.isDigit(isbn.charAt(i))) {
+                    throw new InvalidIsbnException("Invalid ISBN-10: " + isbn);
+                }
+                sum += (isbn.charAt(i) - '0') * (10 - i);
+            }
+            if (sum % 11 != 0) {
+                throw new InvalidIsbnException("Invalid ISBN-10: " + isbn);
+            }
         } else if (isbn.length() == 13) {
             // Implement 13-digit ISBN validation
+            int sum = 0;
+            for (int i = 0; i < 13; i++) {
+                // Assuming that the ISBN contains only digits
+                if (!Character.isDigit(isbn.charAt(i))) {
+                    throw new InvalidIsbnException("Invalid ISBN-13: " + isbn);
+                }
+                int digit = isbn.charAt(i) - '0';
+                sum += (i % 2 == 0) ? digit : digit * 3;
+            }
+            if (sum % 10 != 0) {
+                throw new InvalidIsbnException("Invalid ISBN-13: " + isbn);
+            }
         } else {
             throw new InvalidIsbnException("Invalid ISBN length: " + isbn);
         }
@@ -168,18 +213,41 @@ public class BookStore {
         }
     }
 
-    private static void writeRecordToGenreFile(String[] fields, String fileName) {
-        String genreFileName = WRITE_BASE_PATH + getGenreFileName(fields[4]);
-        try (PrintWriter out = new PrintWriter(new FileWriter(genreFileName, true))) { // true to append
+    private static void writeRecordToGenreFile(String[] fields, String fileName) throws UnknownGenreException {
+        String genreFileName = getGenreFileName(fields[4]);
+        if (genreFileName == null) {
+            throw new UnknownGenreException("Unknown genre: " + fields[4]);
+        }
+        genreFileName = WRITE_BASE_PATH + genreFileName; // Prepend the write path
+        try (PrintWriter out = new PrintWriter(new FileWriter(genreFileName, true))) {
             out.println(String.join(",", fields));
         } catch (IOException e) {
             System.out.println("Error writing to genre file: " + genreFileName);
         }
     }
 
-    private static String getGenreFileName(String genre) {
-        // Implement this method to map genre codes to CSV file names
-        return genre + ".csv"; // Placeholder implementation
+    private static String getGenreFileName(String genreCode) {
+        switch (genreCode) {
+            case "CCB":
+                return "Cartoons_Comics_Books.csv";
+            case "HCB":
+                return "Hobbies_Collectibles_Books.csv";
+            case "MTV":
+                return "Movies_TV_Books.csv";
+            case "MRB":
+                return "Music_Radio_Books.csv";
+            case "NEB":
+                return "Nostalgia_Eclectic_Books.csv";
+            case "OTR":
+                return "Old_Time_Radio_Books.csv";
+            case "SSM":
+                return "Sports_Sports_Memorabilia.csv";
+            case "TPA":
+                return "Trains_Planes_Automobiles.csv";
+            default:
+                // Handle unknown genre code or throw an exception if that's the requirement
+                return null;
+        }
     }
 
     private static void logSyntaxError(String errorMessage, String record, String fileName) {
