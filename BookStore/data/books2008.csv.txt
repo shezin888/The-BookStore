@@ -20,7 +20,7 @@ Billboard Top Adult Songs 1961-2006,Joel Whitburn,39.95,0898201691,MRB,2008
 Bjork - Wow And Flutter,Mark Pytlik,14.95,1550225561,MRB,2008
 "Blues - NPR Curious Listener's Guide To Blues, The",David Evans,5.95,039953072X,MRB,2008
 "Bush, Kate - The Illustrated Collector's Guide To Kate Bush (2nd Edition)",Robert Godwin,14.95,1894959450,MRB,2008
-Cartoon Music Book,,16.95,1556524730,MRB,2008
+Cartoon Music BookStore.Book,,16.95,1556524730,MRB,2008
 "Cassidy, David - Could it be Forever? My Story",David Cassidy,20.95,9780755315796,MRB,2008
 Chasin' That Devil Music - Searching For The Blues [With Bonus CD],Gayle Dean Wardlow,14.95,9780879305529,MRB,2008
 "Cline, Patsy - Honky Tonk Angel: The Intimate Story of Patsy Cline",Ellis Nassour,14.95,9781556527470,MRB,2008
@@ -63,7 +63,7 @@ Led Zeppelin: The Story of a Band and Their Music 1968-1980,Matteo Molinari & Ji
 "McCartney, Paul - Each One Believing",Bill Bernstein,9.95,0811845079,MRB,2008
 New York Dolls - Photographs By Bob Gruen,Bob Gruen (Photographs) & Legs McNeil (Commentary Collection) & Morrissey (Awd.),22.95,9780810972711,MRB,2008
 Notable Moments of Women in Music,Jay Warner,16.95,9781423429517,MRB,2008
-Official Book of Punk Rock Lists,Amy Wallace & Handsome Dick Manitoba,14.95,0879309199,MRB,2008
+Official BookStore.Book of Punk Rock Lists,Amy Wallace & Handsome Dick Manitoba,14.95,0879309199,MRB,2008
 On This Day in Music History,Jay Warner,16.95,0634066935,MRB,2008
 "Opera Companies And Houses of The United States - A Comprehensive, Illustrated Reference",Karyl Lynn Zietz,44.95,9780786438990,MRB,2008
 "Opera Companies And Houses of Western Europe, Canada, Australia And New Zealand - A Comprehensive Illustrated Reference",Karyl Lynn Zietz,44.95,9780786438983,MRB,2008

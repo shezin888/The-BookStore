@@ -1,4 +1,4 @@
-// -----------------------------------------------------
+package BookStore;// -----------------------------------------------------
 // Assignment #2
 // Question: (include question/part number, if applicable)
 // Written by: Adeel Saleem - 40277636; Shezin Saleem - 40278853
@@ -7,6 +7,7 @@
 // Represents a bookstore management system. This system processes book records from CSV files,
 // validates their syntax, categorizes them by genre, and handles serialization and deserialization of book objects.
 
+// JavaDoc --> "javadoc -package BookStore -d *.java"
 import java.io.*;
 import java.util.Scanner;
 
@@ -83,7 +84,7 @@ class BadYearException extends Exception {
 }
 
 /**
- * Represents a Book with various attributes such as title, authors, price, ISBN, genre, and publication year.
+ * Represents a BookStore.Book with various attributes such as title, authors, price, ISBN, genre, and publication year.
  */
 class Book implements Serializable{
 
@@ -95,7 +96,7 @@ class Book implements Serializable{
     int year;
 
     /**
-     * Constructs a Book object.
+     * Constructs a BookStore.Book object.
      * @param title The title of the book.
      * @param authors The authors of the book.
      * @param price The price of the book.
@@ -209,12 +210,12 @@ class Book implements Serializable{
     }
 
     /**
-     * Provides a string representation of the Book object.
-     * @return A string representation of the Book object.
+     * Provides a string representation of the BookStore.Book object.
+     * @return A string representation of the BookStore.Book object.
      */
     @Override
     public String toString() {
-        return "Book{" +
+        return "BookStore.Book{" +
                 "title='" + title + '\'' +
                 ", authors='" + authors + '\'' +
                 ", price=" + price +
@@ -232,7 +233,6 @@ class Book implements Serializable{
  * @author Shezin Saleem
  */
 public class BookStore {
-
     private static final String READ_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/data/"; // Example write path
     private static final String WRITE_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/output/"; // Example write path
 
@@ -246,6 +246,13 @@ public class BookStore {
             "Trains_Planes_Automobiles.csv"};
 
     private static final int[] books_count = new int[genres_filenames.length];
+
+    /**
+     * Default Constructor for BookStore Class
+     */
+    public BookStore() {
+
+    }
 
 
     /**
@@ -300,7 +307,7 @@ public class BookStore {
      * @param configFileName The name of the configuration file.
      * @return An array of file names.
      */
-    private static String[] getFileNames(String configFileName) {
+    public static String[] getFileNames(String configFileName) {
         // Assuming an upper limit for the number of files
         String[] tempFileNames = new String[100];
         int count = 0;
@@ -336,7 +343,7 @@ public class BookStore {
      * @throws MissingFieldException If a required field is missing.
      * @throws UnknownGenreException If the genre is unknown.
      */
-    private static void processLine(String line, String fileName) throws TooManyFieldsException, TooFewFieldsException, MissingFieldException, UnknownGenreException {
+    public static void processLine(String line, String fileName) throws TooManyFieldsException, TooFewFieldsException, MissingFieldException, UnknownGenreException {
         // Split the line into fields. Considering a record might have double quotes for title field with commas.
         String[] fields = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
@@ -382,7 +389,7 @@ public class BookStore {
      * @param priceStr The price string to validate.
      * @throws BadPriceException If the price format is invalid.
      */
-    private static void validatePrice(String priceStr) throws  BadPriceException {
+    public static void validatePrice(String priceStr) throws  BadPriceException {
         try {
             double price = Double.parseDouble(priceStr);
             if (price < 0) throw new  BadPriceException("Invalid Price: " + priceStr);
@@ -396,7 +403,7 @@ public class BookStore {
      * @param yearStr The year string to validate.
      * @throws BadYearException If the year format is invalid.
      */
-    private static void validateYear(String yearStr) throws BadYearException {
+    public static void validateYear(String yearStr) throws BadYearException {
         try {
             int year = Integer.parseInt(yearStr);
             if (year < 1995 || year > 2024) throw new BadYearException("Invalid year: " + yearStr);
@@ -411,7 +418,7 @@ public class BookStore {
      * @throws BadIsbn10Exception If the isbn-10 format is invalid.
      * @throws BadIsbn13Exception If the isbn-13 format is invalid.
      */
-    private static void validateISBN(String isbn) throws  BadIsbn10Exception, BadIsbn13Exception {
+    public static void validateISBN(String isbn) throws  BadIsbn10Exception, BadIsbn13Exception {
         if (isbn.length() == 10) {
             // Implement 10-digit ISBN validation
             int sum = 0;
@@ -448,7 +455,7 @@ public class BookStore {
      * Validates the genre in the files, if it doesn't belong to any of them listed below null is returned.
      * @param genre The genre string to validate.
      */
-    private static boolean isValidGenre(String genre) {
+     public static boolean isValidGenre(String genre) {
         switch (genre) {
             case "CCB":
             case "HCB":
@@ -470,7 +477,7 @@ public class BookStore {
      * @param fileName The name of the file being processed.
      * @throws UnknownGenreException If the genre is unknown.
      */
-    private static void writeRecordToGenreFile(String[] fields, String fileName) throws UnknownGenreException {
+    public static void writeRecordToGenreFile(String[] fields, String fileName) throws UnknownGenreException {
         String genreFileName = getGenreFileName(fields[4]);
         if (genreFileName == null) {
             throw new UnknownGenreException("Unknown genre: " + fields[4]);
@@ -489,7 +496,7 @@ public class BookStore {
      * @param genreFileName The name of the genre file.
      * @return The index of the genre file name in the array, or -1 if not found.
      */
-    private static int getGenreIndex(String genreFileName) {
+    public static int getGenreIndex(String genreFileName) {
 
         for(int i = 0; i < genres_filenames.length; i++){
             if (genres_filenames[i].equals(genreFileName))
@@ -504,7 +511,7 @@ public class BookStore {
      * @param genreCode The genre code.
      * @return The file name associated with the genre code, or null if the genre code is unknown.
      */
-    private static String getGenreFileName(String genreCode) {
+    public static String getGenreFileName(String genreCode) {
         switch (genreCode) {
             case "CCB":
                 return "Cartoons_Comics.csv";
@@ -534,7 +541,7 @@ public class BookStore {
      * @param record The record causing the error.
      * @param fileName The file name where the error occurred.
      */
-    private static void logSyntaxError(String errorMessage, String record, String fileName) {
+    public static void logSyntaxError(String errorMessage, String record, String fileName) {
         String errorFileName = WRITE_BASE_PATH + "syntax_error_file.txt";
         try (PrintWriter out = new PrintWriter(new FileWriter(errorFileName, true))) { // true to append
             out.printf("Syntax error in file: %s%nError: %s%nRecord: %s%n%n", fileName, errorMessage, record);
@@ -613,7 +620,7 @@ public class BookStore {
      * @param record The record causing the error.
      * @param fileName The file name where the error occurred.
      */
-    private static void logSemanticError(String errorMessage, String record, String fileName) {
+    public static void logSemanticError(String errorMessage, String record, String fileName) {
         String errorFileName = WRITE_BASE_PATH + "semantic_error_file.txt";
         try (PrintWriter out = new PrintWriter(new FileWriter(errorFileName, true))) { // true to append
             out.printf("Semantic error in file: %s%nError: %s%nRecord: %s%n%n", fileName, errorMessage, record);
@@ -634,8 +641,8 @@ public class BookStore {
 
     /**
      * Perform part 3 of the assignment, part 3 deals with deserializing the binary files which were created in part2.
-     * In this part we open each of the eight binary files produced in Part 2, deserializing the object in each binary file into an array of Book objects.
-     * Also, the user can navigate the objects in any of the arrays of Book objects, moving up or down relative to the current object in the array, which
+     * In this part we open each of the eight binary files produced in Part 2, deserializing the object in each binary file into an array of BookStore.Book objects.
+     * Also, the user can navigate the objects in any of the arrays of BookStore.Book objects, moving up or down relative to the current object in the array, which
      * is initially set to the first object in the array
      */
     public static void do_part3() {
@@ -679,7 +686,7 @@ public class BookStore {
         Scanner scan = new Scanner(System.in);
 
         int choice = 0;
-        int recordCount;
+        int recordCount = 0;
         String in;
         do {
             if(choice<0){
@@ -702,7 +709,14 @@ public class BookStore {
                     int index = 0;
                     do{
                         System.out.println("\nEnter number of records to view: ");
-                        recordCount = scan.nextInt();
+
+                        String res = scan.nextLine();
+                        if(res.length()==1 && res.charAt(0)>='0' && res.charAt(0)<='9'){
+                            recordCount = Integer.parseInt(res);
+                        }
+                        else{
+                            continue;
+                        }
 
                         if(recordCount == 0){
                             System.out.println("Exiting to main menu!");

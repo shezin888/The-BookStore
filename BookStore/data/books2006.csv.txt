@@ -1,11 +1,11 @@
 "Animated Film Encyclopedia - A Complete Guide To American Shorts, Features, And Sequences, 1900-1979 (Volumes 1 & 2)",Graham Webb,66.95,9780786428595,CCB,2006
 Artburn,Robbie Conal,5.95,0971920613,CCB,2006
-Comics Buyer's Guide (12th Edition) - 2006 Comic Book Checklist & Price Guide (1961-Present),Maggie Thompson & Brent Frankenhoff & Peter Bickford & John Jackson Miller,16.95,0873499921,CCB,2006
+Comics Buyer's Guide (12th Edition) - 2006 Comic BookStore.Book Checklist & Price Guide (1961-Present),Maggie Thompson & Brent Frankenhoff & Peter Bickford & John Jackson Miller,16.95,0873499921,CCB,2006
 Superman - Superman Sunday Classics 1939-1943,Jerry Siegel & Joe Shuster,11.95,1402737866,CCB,2006
 "Superman: The Dailies, 1939-1942",Jerry Siegel & Joe Shuster,16.95,1402737858,CCB,2006
 Wonder Woman - Complete History,Les Daniels,14.95,0811842339,CCB,2006
 Worlds of Tomorrow - The Amazing Universe of Science Fiction Art,Forrest J. Ackerman & Brad Linaweaver,29.95,188805493X,CCB,2006
-Striking Images - Vintage Match-Book Cover Art,Monte Beauchamp,12.95,0811851435,HCB,2006
+Striking Images - Vintage Match-BookStore.Book Cover Art,Monte Beauchamp,12.95,0811851435,HCB,2006
 AC / DC - Two Sides to Every Glory,Paul Stenning,14.95,1842403087,MRB,2006
 "Archives of the Airwaves, Volume 1",Roger C. Paulson,17.95,1593930372,MRB,2006
 "Archives of the Airwaves, Volume 2",Roger C. Paulson,17.95,1593930380,MRB,2006
@@ -63,7 +63,7 @@ Roxy Music - Both Ends Burning,Jonathan Rigby,22.95,1903111803,MRB,2006
 "Simon, Paul - Definitive Biography",Laura Jackson,5.95,0749923431,MRB,2006
 "Sintra, Frank - Why Sinatra Matters",Pete Hamill,4.95,0316738867,MRB,2006
 "Springsteen, Bruce - Days of Hope and Dreams: Intimate Portrait of Bruce Springsteen",Frank Stefanko,9.95,082308387X,MRB,2006
-Swing Book,Degen Penner,3.95,0316698024,MRB,2006
+Swing BookStore.Book,Degen Penner,3.95,0316698024,MRB,2006
 "Terror On The Air! - Horror Radio in America, 1931-1952",Richard J. Hand,39.95,0786423676,MRB,2006
 This is Uncool - 500 Greatest Singles Since Punk and Disco,Garry Mulholland,14.95,1844031055,MRB,2006
 "Van Halen, Eddie - Know the Man, Play the Music",Malcolm Dome & Rod Fogg,19.95,0879308389,MRB,2006

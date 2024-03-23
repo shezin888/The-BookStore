@@ -41,7 +41,7 @@ Billboard's Rock Tracks 1981-2002,Joel Whitburn,39.95,0898201535,MRB,2009
 "Blue Suede News, Issue #86 (Spring 2009)",Marc Bristol & Gaby Maag-Bristol,4.5,,MRB,2009
 "Blue Suede News, Issue #87 (Summer 2009)",Marc Bristol & Gaby Maag-Bristol,4.5,,MRB,2009
 "Blue Suede News, Issue #88 (Fall 2009)",Marc Bristol & Gaby Maag-Bristol,4.5,,MRB,2009
-Book Of Rock Quotes,Michael Heatley,3.95,9781847724182,MRB,2009
+BookStore.Book Of Rock Quotes,Michael Heatley,3.95,9781847724182,MRB,2009
 By The Time We Got To Woodstock,Bruce Pollock,16.95,9780879309794,MRB,2009
 "Cochran, Eddie - Three Steps To Heaven: The Eddie Cochran Story",Bobby Cochran & Susan Van Hecke,17.95,0634032526,MRB,2009
 "Como, Perry - Perry Como: A Biography And Complete Career Record",Malcolm Macfarlane & Ken Crossland,49.95,9780786437016,MRB,2009
@@ -66,7 +66,7 @@ Goldmine Promo Record & CD Price Guide [2nd Edition],Fred Heggeness,7.95,0873416
 Goldmine Record Album Price Guide (6th Edition),Tim Neely,21.99,1440203733,MRB,2009
 Goldmine Record Album Price Guide (6th Edition) [DVD-ROM Version],Tim Neely,16.99,1440203776,XYZ,2009
 Goldmine Record Album Price Guide [5th Edition],Tim Neely,19.95,0896895327,MRB,2009
-"Grateful Dead - Relix, The Book: The Grateful Dead Experience",Toni Brown (Editor) & Jorma Kaukonen (Foreword) & Dennis McNally (Afterword),24.95,9780879309862,MRB,2009
+"Grateful Dead - Relix, The BookStore.Book: The Grateful Dead Experience",Toni Brown (Editor) & Jorma Kaukonen (Foreword) & Dennis McNally (Afterword),24.95,9780879309862,MRB,2009
 Great Pretenders - My Strange Love Affair With '50s Pop Music,Karen Schoemer,4.95,0743272463,MRB,2009
 "Green, Al - Take Me To The River: An Autobiography",Al Green & Davin Seay,12.95,9781556528101,MRB,2009
 "Hart, Mickey - Songcatchers",Mickey Hart & K.M. Kostyal,6.95,079224107X,MRB,2009
@@ -95,7 +95,7 @@ Morrissey - Meetings With Morrissey [Very Limited Supply],Len Brown,8.95,9781847
 "Morrow, Cousin Brucie - Doo Wop: The Music, The Times, The Era [Author-Signed Edition + Bonus CD] / Rock & Roll ...And The Beat Goes On [Includes Autographed Photo + Bonus CD]",Bruce Morrow & Rich Maloof,39.95,,MRB,2009
 "Morrow, Cousin Brucie - Rock & Roll ...And The Beat Goes On [Includes Autographed Photo + Bonus CD]",Bruce Morrow & Rich Maloof,24.95,0982306431,MRB,2009
 "Novarro, Ramon - Ramon Novarro",Karen Schoemer,29.95,9780786446766,MRB,2009
-"Official Heavy Metal Book Of Lists, The",Eric Danville & Cliff Mott (Illustrations) & Lemmy (Foreword),13.95,9780879309831,MRB,2009
+"Official Heavy Metal BookStore.Book Of Lists, The",Eric Danville & Cliff Mott (Illustrations) & Lemmy (Foreword),13.95,9780879309831,MRB,2009
 "Phelps, Dee Dee - Vinyl Highway: Singing As Dick And Dee Dee",Dee Dee Phelps,14.95,9781934321751,MRB,2009
 Pink Floyd - Pink Floyd (Rex Collections),,22.95,9781905287826,MRB,2009
 Pink Floyd - Pink Floyd FAQ: Everything Left To Know...And More!,Stuart Shea,16.95,0743272463,MRB,2009
@@ -241,7 +241,7 @@ Television Game Show Hosts,David Baber,29.95,9780786445738,MTV,2009
 "Temple, Shirley - Pictorial History",Rita Dubas,19.95,1557836728,MTV,2009
 "Terrorism in American Cinema - An Analytical Filmography, 1960-2008",Robert Cettl,42.95,9780786441556,MTV,2009
 "Total Television Productions - Created And Produced By Total Television Productions: The Story of Underdog, Tennessee Tuxedo And The Rest",Mark Arnold,24.95,1593933452,MTV,2009
-"Van Dyke, Dick - Official Dick Van Dyke Show Book",Vince Waldron & Dick Van Dyke (Foreword),12.95,1557834539,MTV,2009
+"Van Dyke, Dick - Official Dick Van Dyke Show BookStore.Book",Vince Waldron & Dick Van Dyke (Foreword),12.95,1557834539,MTV,2009
 Videoscope #52 Fall 2004,The Phantom Of The Movies,4.95,,MTV,2009
 Videoscope #53 Winter 2005,The Phantom Of The Movies,4.95,,MTV,2009
 Videoscope #54 Spring 2005,The Phantom Of The Movies,4.95,,MTV,2009

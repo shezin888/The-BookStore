@@ -8,7 +8,7 @@ Hanna-Barbera Cartoons,Michael Mallory,18.95,0883631083,CBB,2005
 Krazy Kat - The Comic Art of George Herriman,Patrick McDonnell & Karen O'Connell & Georgia Riley de Havenon,5.95,0810991853,CCB,2005
 Masters of Animation,John Grant,11.95,0823030415,CCB,2005
 Private Eyes In the Comics,John A. Dinan,9.95,159393002X,CCB,2005
-Superhero Book,,24.95,1578591546,CCB,2005
+Superhero BookStore.Book,,24.95,1578591546,CCB,2005
 Superman - The Complete History,Lee Daniels,-12.95,0811842312,CCB,2005
 Antique Golf Collectibles - A Price and Reference Guide (2nd Edition),Chuck Furjanic,14.95,0873417909,HCB,2005
 Antique Trader - Antiques & Collectibles 2006 Price Guide,Kyle Husfloen,16.95,,HCB,2005
@@ -54,9 +54,9 @@ Beatles - Walrus Was Ringo: 101 Beatles Myths Debunked,Alan Clayson & Spencer Le
 "Beck, Jeff - Crazy Fingers",Annette Carson,9.95,0879306327,MRB,2005
 "Bickersons Scripts, Volume 1",Philip Rapp,15.95,0971457042,MRB,2005
 Big Star,Rob Jovanovic,12.95,,MRB,2005
-Billboard Book of Number One Adult Contemporary Hits,Wesley Hyatt,5.95,,BBM,2005
-Billboard Book of Number One Albums,Craig Rosen,7.95,0823075869,MRB,2005
-Billboard Book of Top 40 R&B and Hip-Hop Hits,Joel Whitburn,22.95,0823082830,MRB,2005
+Billboard BookStore.Book of Number One Adult Contemporary Hits,Wesley Hyatt,5.95,,BBM,2005
+Billboard BookStore.Book of Number One Albums,Craig Rosen,7.95,0823075869,MRB,2005
+Billboard BookStore.Book of Top 40 R&B and Hip-Hop Hits,Joel Whitburn,22.95,0823082830,MRB,2005
 "Billboard Christmas In The Charts, 1920-2004",Joel Whitburn,19.95,0898201616,MRB,2005
 Billboard Guide To Progressive Music,Bradley Smith,1.99,0823176652,MRB,2005
 Billboard Hot 100 Charts - The Sixties,Joel Whitburn,56.95,,MRB,2005
@@ -174,7 +174,7 @@ Prisonaires: Just Walkin' In The Rain,Jay Warner,4.95,1580631401,MRB,2005
 Private Eyelashes - Radio's Lady Detectives,Jack French,14.95,0971457085,MRB,2005
 Psychedelic Rock Files,Jerry Lucky,14.95,1896522971,MRB,2005
 "Radio Sound Effects - Who Did It, And How, In The Era of Live Broadcasting",Robert L. Mott,30.95,9780786422661,MRB,2005
-Radiohead - CD-Sized Book,Mick St Michael,1,,MRB,2005
+Radiohead - CD-Sized BookStore.Book,Mick St Michael,1,,MRB,2005
 Real Deal - How To Get Signed To A Record Label,Daylle Deanna Schwartz,13.95,0823084051,MRB,2005
 "Red, White, and the Blues Harmonica",David Harp,11.95,0825634113,MRB,2005
 "Reed, Lou - Walk on the Wild Side",Chris Roberts,11.95,0634080326,MRB,2005
@@ -411,7 +411,7 @@ Baseball - 1940 Cincinnati Reds: A World Championship and Baseball's Only In-Sea
 Baseball - 1964 Phillies: The Story of Baseball's Most Memorable Collapse,,26.96,9780786421176,SSM,2005
 Baseball - 25 Greatest Baseball Teams of The 20th Century Ranked,Chris Holaday & Marshall Adesman,29.95,0786409258,SSM,2005
 Baseball - A Picture Postcard History of Baseball,Ron Menchine,4.95,0930256212,SSM,2005
-"Baseball - All-American Girls Professional Baseball League Record Book: Comprehensive Hitting, Fielding and Pitching Statistics",W.C. Madden,39.95,078640597X,SSM,2005
+"Baseball - All-American Girls Professional Baseball League Record BookStore.Book: Comprehensive Hitting, Fielding and Pitching Statistics",W.C. Madden,39.95,078640597X,SSM,2005
 "Baseball - And The Skipper Bats Cleanup: A History of the Baseball Player-Manager, with 42 Biographies of Men Who Filled the Dual Role",Fred Stein,24.95,0786412283,SSM,2005
 "Baseball - Anson, Cap: The Grand Old Man of Baseball",David L. Fleitz,24.95,0786422386,SSM,2005
 Baseball - At Home And Away: 33 Years of Baseball Essays,John Kuenster,24.95,0786415592,SSM,2005
