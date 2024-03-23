@@ -233,8 +233,8 @@ class Book implements Serializable{
  * @author Shezin Saleem
  */
 public class BookStore {
-    private static final String READ_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/data/"; // Example write path
-    private static final String WRITE_BASE_PATH = "/home/shezin/Desktop/gitrepo/The-BookStore/BookStore/output/"; // Example write path
+    private static final String READ_BASE_PATH = "C:\\Users\\HP\\Documents\\GitHub\\The-BookStore\\BookStore\\data\\"; // Example write path
+    private static final String WRITE_BASE_PATH = "C:\\Users\\HP\\Documents\\GitHub\\The-BookStore\\BookStore\\output\\"; // Example write path
 
     private static final String[] genres_filenames = {"Cartoons_Comics.csv",
             "Hobbies_Collectibles.csv",
@@ -686,7 +686,7 @@ public class BookStore {
         Scanner scan = new Scanner(System.in);
 
         int choice = 0;
-        int recordCount = 0;
+        int recordCount = -100;
         String in;
         do {
             if(choice<0){
@@ -711,10 +711,15 @@ public class BookStore {
                         System.out.println("\nEnter number of records to view: ");
 
                         String res = scan.nextLine();
-                        if(res.length()==1 && res.charAt(0)>='0' && res.charAt(0)<='9'){
+
+                        try
+                        {
+                            recordCount = -1000;
                             recordCount = Integer.parseInt(res);
                         }
-                        else{
+                        catch (NumberFormatException e)
+                        {
+                            System.out.println("\nInvalid input, try again!");
                             continue;
                         }
 
@@ -813,6 +818,8 @@ public class BookStore {
                 case "x":
                     System.out.println("\nExiting...");
                     break;
+                default:
+                    System.out.println("\nInvalid input, try again!");
             }
         }
         while (!in.equals("x") && !in.equals("X"));
